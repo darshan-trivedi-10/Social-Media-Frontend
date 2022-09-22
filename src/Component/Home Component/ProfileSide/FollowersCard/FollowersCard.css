@@ -1,0 +1,70 @@
+.FollowerCard {
+    width: 100%;
+    border-radius: 0.7rem;
+    gap: 1rem;
+    display: flex;
+    flex-direction: column;
+    font-size: 10px;
+}
+
+.follower {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.follower>div {
+    display: flex;
+    gap: 10px;
+}
+
+.followerImg {
+    width: 3.2rem;
+    height: 3.2rem;
+    border-radius: 50%;
+}
+
+.name {
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
+    justify-content: center;
+    padding-top: 9px;
+    font-size: 0.8rem;
+}
+
+.name>span:nth-of-type(1) {
+    font-weight: bold;
+}
+
+.fc-button {
+    height: 2rem;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-bottom: 24px;
+}
+
+.unfollow-btn {
+
+    color: var(--orange);
+    border: 2px solid var(--orange);
+    cursor: pointer;
+    background: transparent;
+}
+
+.userSearch {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: -2rem;
+}
+
+.userSearch>input{
+    width: 40%;
+    height: 2rem;
+    border-radius: 5px;
+}
+
+.userSearch>button{
+    width: 20%;
+}
