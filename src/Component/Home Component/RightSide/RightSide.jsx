@@ -11,22 +11,24 @@ import { Link } from 'react-router-dom';
 
 const RightSide = () => {
     const [modalOpened, setModalOpened] = useState(false);
-    
+
     return (
-        <div className='RightSide'>
-            <div className='navIcons'>
-                <Link to='../home' >
-                    <img src={Home} alt='home-icon' />
-                </Link>
-                <UilSetting />
-                <img src={Noti} alt='Noti-icon' />
-                <img src={Comment} alt='Comment-icon' />
+
+            <div className='RightSide'>
+                <div className='navIcons'>
+                    <Link to='../home' >
+                        <img src={Home} alt='home-icon' />
+                    </Link>
+                    <UilSetting />
+                    <img src={Noti} alt='Noti-icon' />
+                    <img src={Comment} alt='Comment-icon' />
+                </div>
+                <TrendCard />
+                <button className='button r-btn' onClick={() => setModalOpened(true)}>Share</button>
+                <ShareModal modalOpened={modalOpened} setModalOpened={setModalOpened} />
             </div>
-            <TrendCard />
-            <button className='button r-btn' onClick={() => setModalOpened(true)}>Share</button>
-            <ShareModal modalOpened={modalOpened} setModalOpened={setModalOpened} />
-        </div>
     )
 }
+
 
 export default RightSide
