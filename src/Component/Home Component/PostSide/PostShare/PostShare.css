@@ -4,7 +4,9 @@
     background-color: var(--cardColor);
     padding: 1rem;
     border-radius: 1rem;
+    justify-content: center;
 }
+
 
 .postShare>img {
     border-radius: 50%;
@@ -12,10 +14,12 @@
     height: 3rem;
 }
 
+
 .postShare>div {
     display: flex;
     flex-direction: column;
-    width: 90%;
+    justify-content: center;
+    width: 80%;
     gap: 1rem;
 }
 
@@ -30,7 +34,22 @@
 
 .postOptions {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    width: 90%;
+    justify-self: center;
+    margin-left: -100px;
+}
+
+
+@media screen and (max-width : 450px) {
+    .postOptions {
+        width: 100%;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-left: 0px;
+    }
+
+
 }
 
 .option {
@@ -69,5 +88,5 @@
     width: 100%;
     max-height: 20rem;
     object-fit: cover;
-    border-radius: 0.5rem  ;
+    border-radius: 0.5rem;
 }

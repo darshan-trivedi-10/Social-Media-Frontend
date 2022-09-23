@@ -9,13 +9,15 @@ import ShareModal from './ShareModel/ShareModel'
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
-const RightSide = () => {
+const RightSide = ({ data }) => {
     const [modalOpened, setModalOpened] = useState(false);
+
 
     return (
 
-            <div className='RightSide'>
-                <div className='navIcons'>
+        <div className='RightSide'>
+            {
+                (data === undefined) && <div className='navIcons'>
                     <Link to='../home' >
                         <img src={Home} alt='home-icon' />
                     </Link>
@@ -23,10 +25,11 @@ const RightSide = () => {
                     <img src={Noti} alt='Noti-icon' />
                     <img src={Comment} alt='Comment-icon' />
                 </div>
-                <TrendCard />
-                <button className='button r-btn' onClick={() => setModalOpened(true)}>Share</button>
-                <ShareModal modalOpened={modalOpened} setModalOpened={setModalOpened} />
-            </div>
+            }
+            <TrendCard />
+            <button className='button r-btn' onClick={() => setModalOpened(true)}>Share</button>
+            <ShareModal modalOpened={modalOpened} setModalOpened={setModalOpened} />
+        </div>
     )
 }
 

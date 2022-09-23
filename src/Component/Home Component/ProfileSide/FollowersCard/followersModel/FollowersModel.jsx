@@ -28,7 +28,7 @@ function FollowersModel({ modalOpened, setModalOpened }) {
             }
             overlayOpacity={0.55}
             overlayBlur={3}
-            size="55%"
+            size="80%"
             opened={modalOpened}
             onClose={() => setModalOpened(false)}
         >

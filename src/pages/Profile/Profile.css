@@ -1,12 +1,31 @@
 .Profile {
     position: relative;
     display: grid;
-    grid-template-columns: 18rem auto 20rem;
+    grid-template-columns: 18rem auto;
     gap: 1rem;
+    overflow-y: hidden;
+    overflow-x: hidden;
 }
 
 .Profile-center {
     display: flex;
     flex-direction: column;
     gap: 1rem;
+}
+
+@media only screen and (max-width:426px) {
+    .Profile {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media only screen and (max-width:770px) {
+    .Profile {
+        grid-template-columns: 15rem auto;
+    }
+
+    .Profile-center {
+        min-width: 15rem;
+    }
 }

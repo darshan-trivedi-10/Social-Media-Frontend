@@ -4,6 +4,10 @@
     z-index: 5;
 }
 
+.newColor {
+    filter: invert(10%) sepia(90%) saturate(3500%) hue-rotate(245deg) brightness(109%) contrast(155%);
+}
+
 .Search {
     display: flex;
     background-color: rgba(40, 52, 62, 0.07);
@@ -21,7 +25,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(106.23deg, #f99827, #f95f35 100%);
+    /* background: linear-gradient(106.23deg, #f99827, #f95f35 100%); */
+    background:var(--orange);
     border-radius: 5px;
     padding: 4px;
     color: white;

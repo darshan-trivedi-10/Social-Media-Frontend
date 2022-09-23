@@ -11,10 +11,15 @@
     max-height: 20rem;
     object-fit: cover;
     border-radius: 0.5rem;
+
 }
 
 .postReact {
     display: flex;
     align-items: flex-start;
     gap: 1.5rem;
+}
+
+.redLike {
+    filter: invert(16%) sepia(99%) saturate(7404%) hue-rotate(4deg) brightness(95%) contrast(118%);
 }

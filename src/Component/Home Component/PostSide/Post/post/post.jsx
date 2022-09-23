@@ -20,13 +20,11 @@ const Post = ({ data }) => {
         liked ? setLikes((prev) => prev - 1) : setLikes((prev) => prev + 1);
     }
 
-
-
     return (
         <div className='post'>
             <img src={data.image ? process.env.REACT_APP_PUBLIC_FOLDER + data.image : ""} alt='userImage' />
             <div className='postReact'>
-                <img src={liked ? Heart : NotLike} alt='likeOrDislike' style={{ cursor: "pointer" }} onClick={handleLike} />
+                <img className={liked ? "redLike":"aa"} src={liked ? Heart : NotLike} alt='likeOrDislike' style={{ cursor: "pointer" }} onClick={handleLike} />
                 {/* <img src={Comment} alt='Comment' /> */}
                 {/* <img src={Share} alt='Share' /> */}
             </div>
