@@ -43,3 +43,9 @@ Social Media App is app with multiple features built with MERN Stack. This is we
 4. Heroku NodeJs environment - deployment.
 5. Netlify for Frontend deployment
  
+# Deployed Version
+
+**Frontend Deployment URL =** https://mysocialmedia10.netlify.app/](https://mysocialmedia10.netlify.app/)
+
+**Backend Deployment URL =** [http://mysocialmedia10.herokuapp.com/](http://mysocialmedia10.herokuapp.com/)
+
