@@ -16,11 +16,13 @@
 
 .a-left {
     gap: 2rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .a-left>img {
     width: 4rem;
     height: 4rem;
+    filter: invert(10%) sepia(90%) saturate(3500%) hue-rotate(245deg) brightness(109%) contrast(155%);
 }
 
 .webName>h1 {

@@ -18,7 +18,7 @@ const PostShare = () => {
     const imageRef = useRef();
     const { user } = useSelector((state) => state.authReducer.authData)
     const desc = useRef();
-    const serverPublic = process.env.REACT_APP_PUBLIC_FOLDER;
+    const serverPublic = 'https://mysocialmedia10.herokuapp.com/images/'
 
     const onImageChange = (event) => {
         if (event.target.files && event.target.files[0]) {

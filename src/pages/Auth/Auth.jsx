@@ -18,16 +18,38 @@ const Auth = () => {
         confirmPassword: ""
     })
     const [confirmPass, setConfirmPass] = useState(true);
+    const [warningData, setWarningData] = useState('');
+    // warningData
+
 
     const handleChange = (event) => {
-        setUserData({ ...userData, [event.target.name]: event.target.value })
-        setConfirmPass(true)
+        setUserData({ ...userData, [event.target.name]: event.target.value });
+        setConfirmPass(true);
+        setWarningData('');
+        console.log(checkDetails());
+    }
+
+    const checkDetails = () => {
+        if (userData.firstname.length === 0 || userData.lastname.length === 0 || userData.username.length === 0 || userData.password.length === 0) {
+            console.log(userData.password.length)
+            return true;
+        }
+        console.log(userData.password.length)
+        return false;
     }
 
     const handleSubmit = (event) => {
         event.preventDefault();
+        console.log(warningData);
+
+        console.log(checkDetails());
         if (isSignUp) {
-            userData.password === userData.confirmPassword ? dispatch(signUp(userData)) : setConfirmPass(false);
+            if (checkDetails()) {
+                setWarningData("Please Fill all the details . . .");
+                console.log(warningData);
+            } else {
+                userData.password === userData.confirmPassword ? dispatch(signUp(userData)) : setWarningData('Confirm Password ans Password is not Same ');
+            }
         } else {
             dispatch(logIn(userData))
         }
@@ -51,7 +73,7 @@ const Auth = () => {
             <div className='a-left'>
                 <img src={Logo} alt='logo' />
                 <div className='webName'>
-                    <h1>ZKC Media</h1>
+                    <h1>NEW Media</h1>
                     <h6>Explore the impact of it and ites in various areas </h6>
                 </div>
             </div>
@@ -77,9 +99,11 @@ const Auth = () => {
                         }
                     </div>
                     {
-                        (!confirmPass && isSignUp) &&
+                        isSignUp &&
                         < span className='passwordWarning'>
-                            * Confirm Password ans Password is not Same
+                            {
+                                warningData
+                            }
                         </span>
                     }
                     <div  >

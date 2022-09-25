@@ -22,9 +22,9 @@ const Post = ({ data }) => {
 
     return (
         <div className='post'>
-            <img src={data.image ? process.env.REACT_APP_PUBLIC_FOLDER + data.image : ""} alt='userImage' />
+            <img src={data.image ? "https://mysocialmedia10.herokuapp.com/images/" + data.image : ""} alt='userImage' />
             <div className='postReact'>
-                <img className={liked ? "redLike":"aa"} src={liked ? Heart : NotLike} alt='likeOrDislike' style={{ cursor: "pointer" }} onClick={handleLike} />
+                <img className={liked ? "redLike" : "aa"} src={liked ? Heart : NotLike} alt='likeOrDislike' style={{ cursor: "pointer" }} onClick={handleLike} />
                 {/* <img src={Comment} alt='Comment' /> */}
                 {/* <img src={Share} alt='Share' /> */}
             </div>

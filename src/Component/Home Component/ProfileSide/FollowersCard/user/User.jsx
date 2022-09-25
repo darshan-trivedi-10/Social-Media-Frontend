@@ -9,7 +9,7 @@ const User = ({ userData }) => {
     const { user } = useSelector((state) => state.authReducer.authData);
     const [following, setFollowing] = useState(userData.followers.includes(user._id))
 
-    const serverPublic = process.env.REACT_APP_PUBLIC_FOLDER;
+    const serverPublic = 'https://mysocialmedia10.herokuapp.com/images/';
 
     const handleFollow = () => {
         if (following) {
