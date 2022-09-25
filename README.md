@@ -3,9 +3,9 @@ Social Media App is app with multiple features built with MERN Stack. This is we
 
 # Table of Content
  
-- [Preview](https://screenvideorecoder.netlify.app/index.html) 
-- [Features](https://screenvideorecoder.netlify.app/index.html)
-- [TechStack](https://screenvideorecoder.netlify.app/index.html)
+- [Preview](https://github.com/darshan-trivedi-10/Social-Media-Frontend#preview) 
+- [Features](https://github.com/darshan-trivedi-10/Social-Media-Frontend#key-features)
+- [TechStack](https://github.com/darshan-trivedi-10/Social-Media-Frontend#techstack)
 
 
 # Preview
