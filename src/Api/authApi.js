@@ -2,7 +2,7 @@ import axios from 'axios'
 
 const API = axios.create(
     {
-        baseURL: "https://mysocialmedia10.herokuapp.com",
+        baseURL: "https://social-media-backend-2vez.onrender.com",
     }
 )
 

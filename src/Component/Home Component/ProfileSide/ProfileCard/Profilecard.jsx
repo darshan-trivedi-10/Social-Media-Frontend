@@ -9,7 +9,7 @@ const Profilecard = ({ location }) => {
 
     const { user } = useSelector((state) => state.authReducer.authData);
     const posts = useSelector((state) => state.postReducer.posts)
-    const serverPublic = 'https://mysocialmedia10.herokuapp.com/images/';
+    const serverPublic = 'https://social-media-backend-2vez.onrender.com/images/';
     return (
         <div className='ProfileCard'>
             <div className='ProfileImages'>

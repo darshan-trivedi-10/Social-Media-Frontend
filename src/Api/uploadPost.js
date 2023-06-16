@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const API = axios.create({ baseURL: "https://mysocialmedia10.herokuapp.com/" })
+const API = axios.create({ baseURL: "https://social-media-backend-2vez.onrender.com" })
 
 export const uploadImage = (data) => {
     return API.post('/upload', data)
